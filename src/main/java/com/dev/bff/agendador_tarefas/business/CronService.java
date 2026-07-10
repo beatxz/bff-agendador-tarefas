@@ -30,7 +30,7 @@ public class CronService {
     @Scheduled(cron = "${cron.horario}")
     public void buscarTarefasProximaHora(){
         String token = login(converterParaRequestDTO());
-a        log.info("Iniciada busca de tarefas");
+        log.info("Iniciada busca de tarefas");
         LocalDateTime horaFutura = LocalDateTime.now().plusHours(1);
         LocalDateTime horaFuturaMaisCinco = LocalDateTime.now().plusHours(1).plusMinutes(5);
 
